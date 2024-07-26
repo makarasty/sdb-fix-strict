@@ -5,9 +5,11 @@ A library for `discord.js` that fixes `ActionRowBuilder<any>` errors by defining
 install `npm i sdb-fix-strict`
 
 # That fixes
-![image-error](https://github.com/user-attachments/assets/0b9284f8-24d6-4f44-b6aa-e4743913f3d6)
+With out `sdb-fix-strict`:
 <br>
-using `npm i sdb-fix-strict`
+![image](https://github.com/user-attachments/assets/543c8f34-3df1-4c2a-946d-ba05eaa37c7e)
+<br>
+Using `sdb-fix-strict`:
 <br>
 ![image](https://github.com/user-attachments/assets/31e02959-2ad5-457f-9471-f437eada42af)
 
@@ -18,6 +20,8 @@ using `npm i sdb-fix-strict`
 
 # Some usage example
 ```js
+const sdbFixStrict = require("./index.js"); // require("sdb-fix-strict");
+
 interaction.reply({
 	content: 'do you love codding?',
 	components: [
@@ -30,6 +34,19 @@ interaction.reply({
 			)
 	]
 })
+```
+
+# Functions
+```js
+const fix_s = require("./index.js");
+
+fix_s.getActionRowButtons()
+fix_s.getActionRowChannelSelectMenu()
+fix_s.getActionRowMentionableSelectMenu()
+fix_s.getActionRowRoleSelectMenu()
+fix_s.getActionRowStringSelectMenu()
+fix_s.getActionRowUserSelectMenu()
+fix_s.getActionRowTextInput()
 ```
 
 *Made with ♥*
