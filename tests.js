@@ -8,35 +8,23 @@ const bot = new Discord.Client({
 	intents: 47007
 });
 
-/**
- * @typedef {((client: any, id: any) => Promise<any>)} GetFunction
-*/
-
 bot.once("ready", async (client) => {
+	const tests = [
+		sdbFixStrict.getActionRowButtons,
+		sdbFixStrict.getActionRowChannelSelectMenu,
+		sdbFixStrict.getActionRowMentionableSelectMenu,
+		sdbFixStrict.getActionRowRoleSelectMenu,
+		sdbFixStrict.getActionRowStringSelectMenu,
+		sdbFixStrict.getActionRowUserSelectMenu,
+		sdbFixStrict.getActionRowTextInput
+	].map(async (row) => {
+		return {
+			name: row.name,
+			instanceOfActionRowBuilder: row() instanceof Discord.ActionRowBuilder
+		}
+	});
 
-	const guild = client.guilds.cache.get('785107327413911592')
-
-	if (!guild) return console.log("no guild");
-
-	const channel = guild.channels.cache.get("1221173259941314730")
-
-	if (!channel || !channel.isTextBased()) return console.log("no channel");
-
-	const message = channel.messages.cache.get("1228799021389320395")
-
-	if (!message) return console.log("no message");
-
-	message.edit({
-		components: [
-			sdbFixStrict.getActionRowButtons()
-				.setComponents(
-					new Discord.ButtonBuilder()
-						.setCustomId('loveIt')
-						.setEmoji('❤')
-						.setStyle(Discord.ButtonStyle.Secondary)
-				)
-		]
-	})
+	console.log(tests);
 
 	console.log("All tests trying!");
 
