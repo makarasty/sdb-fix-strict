@@ -7,7 +7,7 @@ install `npm i sdb-fix-strict`
 # That fixes
 ![image-error](https://github.com/user-attachments/assets/0b9284f8-24d6-4f44-b6aa-e4743913f3d6)
 <br>
-to
+using `npm i sdb-fix-strict`
 <br>
 ![image](https://github.com/user-attachments/assets/31e02959-2ad5-457f-9471-f437eada42af)
 
