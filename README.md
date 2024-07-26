@@ -20,7 +20,7 @@ Using `sdb-fix-strict`:
 
 # Some usage example
 ```js
-const sdbFixStrict = require("./index.js"); // require("sdb-fix-strict");
+const sdbFixStrict = require("sdb-fix-strict");
 
 interaction.reply({
 	content: 'do you love codding?',
@@ -38,7 +38,7 @@ interaction.reply({
 
 # Functions
 ```js
-const fix_s = require("./index.js"); // require("sdb-fix-strict");
+const fix_s = require("sdb-fix-strict");
 
 fix_s.getActionRowButtons()
 fix_s.getActionRowChannelSelectMenu()
