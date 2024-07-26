@@ -38,7 +38,7 @@ interaction.reply({
 
 # Functions
 ```js
-const fix_s = require("./index.js");
+const fix_s = require("./index.js"); // require("sdb-fix-strict");
 
 fix_s.getActionRowButtons()
 fix_s.getActionRowChannelSelectMenu()
