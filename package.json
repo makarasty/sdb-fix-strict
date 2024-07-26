@@ -1,0 +1,18 @@
+{
+	"name": "sdb-fix-strict",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "node tests.js",
+		"start": "node index.js"
+	},
+	"author": "MaKarastY",
+	"license": "MIT",
+	"peerDependencies": {
+		"discord.js": "^14.0.0"
+	},
+	"devDependencies": {
+		"dotenv": "^16.4.5"
+	}
+}
