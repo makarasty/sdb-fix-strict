@@ -1,6 +1,6 @@
 {
 	"name": "sdb-fix-strict",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"description": "This library resolves ActionRowBuilder<any> type errors in Discord.js by defining the ActionRowBuilder type using JSDoc. It ensures compatibility with discord.js while using 'strict': true in CommonJS environments.",
 	"main": "index.js",
 	"scripts": {

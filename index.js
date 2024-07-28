@@ -1,52 +1,63 @@
 const Discord = require("discord.js");
 
 /**
+ * @typedef {import('types').ActionRowData} ActionRowData
+ */
+
+/**
+ * @param {ActionRowData} data
  * @returns {Discord.ActionRowBuilder<Discord.ButtonBuilder>}
  */
-function getActionRowButtons() {
-	return new Discord.ActionRowBuilder()
+function getActionRowButtons(data) {
+	return new Discord.ActionRowBuilder(data)
 }
 
 /**
+ * @param {ActionRowData} data
  * @returns {Discord.ActionRowBuilder<Discord.ChannelSelectMenuBuilder>}
  */
-function getActionRowChannelSelectMenu() {
-	return new Discord.ActionRowBuilder()
+function getActionRowChannelSelectMenu(data) {
+	return new Discord.ActionRowBuilder(data)
 }
 
 /**
+ * @param {ActionRowData} data
  * @returns {Discord.ActionRowBuilder<Discord.MentionableSelectMenuBuilder>}
  */
-function getActionRowMentionableSelectMenu() {
-	return new Discord.ActionRowBuilder()
+function getActionRowMentionableSelectMenu(data) {
+	return new Discord.ActionRowBuilder(data)
 }
 
 /**
+ * @param {ActionRowData} data
  * @returns {Discord.ActionRowBuilder<Discord.RoleSelectMenuBuilder>}
  */
-function getActionRowRoleSelectMenu() {
-	return new Discord.ActionRowBuilder()
+function getActionRowRoleSelectMenu(data) {
+	return new Discord.ActionRowBuilder(data)
 }
 
 /**
+ * @param {ActionRowData} data
  * @returns {Discord.ActionRowBuilder<Discord.StringSelectMenuBuilder>}
  */
-function getActionRowStringSelectMenu() {
-	return new Discord.ActionRowBuilder()
+function getActionRowStringSelectMenu(data) {
+	return new Discord.ActionRowBuilder(data)
 }
 
 /**
+ * @param {ActionRowData} data
  * @returns {Discord.ActionRowBuilder<Discord.UserSelectMenuBuilder>}
  */
-function getActionRowUserSelectMenu() {
-	return new Discord.ActionRowBuilder()
+function getActionRowUserSelectMenu(data) {
+	return new Discord.ActionRowBuilder(data)
 }
 
 /**
+ * @param {ActionRowData} data
  * @returns {Discord.ActionRowBuilder<Discord.TextInputBuilder>}
  */
-function getActionRowTextInput() {
-	return new Discord.ActionRowBuilder()
+function getActionRowTextInput(data) {
+	return new Discord.ActionRowBuilder(data)
 }
 
 module.exports = {

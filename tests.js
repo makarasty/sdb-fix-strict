@@ -2,7 +2,8 @@ require('dotenv').config();
 
 const Discord = require("discord.js");
 
-const sdbFixStrict = require("./index.js");
+// @ts-expect-error
+const sdbFixStrict = /**@type {import('sdb-fix-strict')}*/(require("./index.js"));
 
 const bot = new Discord.Client({
 	intents: 47007
