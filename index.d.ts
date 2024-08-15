@@ -1,7 +1,7 @@
 declare module "sdb-fix-strict" {
 	import * as Discord from "discord.js";
 
-	type ActionRowData = import("types").ActionRowData;
+	type ActionRowData = import("./types").ActionRowData;
 
 	function getActionRowButtons(
 		data?: ActionRowData,
