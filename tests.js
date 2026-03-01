@@ -1,15 +1,14 @@
 require('dotenv').config();
 
-const Discord = require("discord.js");
+const Discord = require('discord.js');
 
-// @ts-expect-error
-const sdbFixStrict = /**@type {import('sdb-fix-strict')}*/(require("./index.js"));
+const sdbFixStrict = /**@type {import('sdb-fix-strict')}*/ (require('./index.js'));
 
 const bot = new Discord.Client({
-	intents: 47007
+	intents: 47007,
 });
 
-bot.once("ready", async (client) => {
+bot.once('ready', async (client) => {
 	const tests = [
 		sdbFixStrict.getActionRowButtons,
 		sdbFixStrict.getActionRowChannelSelectMenu,
@@ -17,19 +16,19 @@ bot.once("ready", async (client) => {
 		sdbFixStrict.getActionRowRoleSelectMenu,
 		sdbFixStrict.getActionRowStringSelectMenu,
 		sdbFixStrict.getActionRowUserSelectMenu,
-		sdbFixStrict.getActionRowTextInput
+		sdbFixStrict.getActionRowTextInput,
 	].map(async (row) => {
 		return {
 			name: row.name,
-			instanceOfActionRowBuilder: row() instanceof Discord.ActionRowBuilder
-		}
+			instanceOfActionRowBuilder: row() instanceof Discord.ActionRowBuilder,
+		};
 	});
 
 	console.log(tests);
 
-	console.log("All tests trying!");
+	console.log('All tests trying!');
 
 	await client.destroy();
 });
 
-bot.login(process.env.token)
+bot.login(process.env.token);

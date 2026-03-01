@@ -1,4 +1,4 @@
-const Discord = require("discord.js");
+const Discord = require('discord.js');
 
 /**
  * @typedef {import('types').ActionRowData} ActionRowData
@@ -9,7 +9,7 @@ const Discord = require("discord.js");
  * @returns {Discord.ActionRowBuilder<Discord.ButtonBuilder>}
  */
 function getActionRowButtons(data) {
-	return new Discord.ActionRowBuilder(data)
+	return new Discord.ActionRowBuilder(data);
 }
 
 /**
@@ -17,7 +17,7 @@ function getActionRowButtons(data) {
  * @returns {Discord.ActionRowBuilder<Discord.ChannelSelectMenuBuilder>}
  */
 function getActionRowChannelSelectMenu(data) {
-	return new Discord.ActionRowBuilder(data)
+	return new Discord.ActionRowBuilder(data);
 }
 
 /**
@@ -25,7 +25,7 @@ function getActionRowChannelSelectMenu(data) {
  * @returns {Discord.ActionRowBuilder<Discord.MentionableSelectMenuBuilder>}
  */
 function getActionRowMentionableSelectMenu(data) {
-	return new Discord.ActionRowBuilder(data)
+	return new Discord.ActionRowBuilder(data);
 }
 
 /**
@@ -33,7 +33,7 @@ function getActionRowMentionableSelectMenu(data) {
  * @returns {Discord.ActionRowBuilder<Discord.RoleSelectMenuBuilder>}
  */
 function getActionRowRoleSelectMenu(data) {
-	return new Discord.ActionRowBuilder(data)
+	return new Discord.ActionRowBuilder(data);
 }
 
 /**
@@ -41,7 +41,7 @@ function getActionRowRoleSelectMenu(data) {
  * @returns {Discord.ActionRowBuilder<Discord.StringSelectMenuBuilder>}
  */
 function getActionRowStringSelectMenu(data) {
-	return new Discord.ActionRowBuilder(data)
+	return new Discord.ActionRowBuilder(data);
 }
 
 /**
@@ -49,7 +49,7 @@ function getActionRowStringSelectMenu(data) {
  * @returns {Discord.ActionRowBuilder<Discord.UserSelectMenuBuilder>}
  */
 function getActionRowUserSelectMenu(data) {
-	return new Discord.ActionRowBuilder(data)
+	return new Discord.ActionRowBuilder(data);
 }
 
 /**
@@ -57,7 +57,7 @@ function getActionRowUserSelectMenu(data) {
  * @returns {Discord.ActionRowBuilder<Discord.TextInputBuilder>}
  */
 function getActionRowTextInput(data) {
-	return new Discord.ActionRowBuilder(data)
+	return new Discord.ActionRowBuilder(data);
 }
 
 module.exports = {
@@ -67,5 +67,5 @@ module.exports = {
 	getActionRowRoleSelectMenu,
 	getActionRowStringSelectMenu,
 	getActionRowUserSelectMenu,
-	getActionRowTextInput
-}
+	getActionRowTextInput,
+};
