@@ -1,11 +1,11 @@
 const Discord = require('discord.js');
 
 /**
- * @typedef {import('types').ActionRowData} ActionRowData
+ * @typedef {import('./types').ActionRowData} ActionRowData
  */
 
 /**
- * @param {ActionRowData} data
+ * @param {ActionRowData} [data]
  * @returns {Discord.ActionRowBuilder<Discord.ButtonBuilder>}
  */
 function getActionRowButtons(data) {
@@ -13,7 +13,7 @@ function getActionRowButtons(data) {
 }
 
 /**
- * @param {ActionRowData} data
+ * @param {ActionRowData} [data]
  * @returns {Discord.ActionRowBuilder<Discord.ChannelSelectMenuBuilder>}
  */
 function getActionRowChannelSelectMenu(data) {
@@ -21,7 +21,7 @@ function getActionRowChannelSelectMenu(data) {
 }
 
 /**
- * @param {ActionRowData} data
+ * @param {ActionRowData} [data]
  * @returns {Discord.ActionRowBuilder<Discord.MentionableSelectMenuBuilder>}
  */
 function getActionRowMentionableSelectMenu(data) {
@@ -29,7 +29,7 @@ function getActionRowMentionableSelectMenu(data) {
 }
 
 /**
- * @param {ActionRowData} data
+ * @param {ActionRowData} [data]
  * @returns {Discord.ActionRowBuilder<Discord.RoleSelectMenuBuilder>}
  */
 function getActionRowRoleSelectMenu(data) {
@@ -37,7 +37,7 @@ function getActionRowRoleSelectMenu(data) {
 }
 
 /**
- * @param {ActionRowData} data
+ * @param {ActionRowData} [data]
  * @returns {Discord.ActionRowBuilder<Discord.StringSelectMenuBuilder>}
  */
 function getActionRowStringSelectMenu(data) {
@@ -45,7 +45,7 @@ function getActionRowStringSelectMenu(data) {
 }
 
 /**
- * @param {ActionRowData} data
+ * @param {ActionRowData} [data]
  * @returns {Discord.ActionRowBuilder<Discord.UserSelectMenuBuilder>}
  */
 function getActionRowUserSelectMenu(data) {
@@ -53,7 +53,7 @@ function getActionRowUserSelectMenu(data) {
 }
 
 /**
- * @param {ActionRowData} data
+ * @param {ActionRowData} [data]
  * @returns {Discord.ActionRowBuilder<Discord.TextInputBuilder>}
  */
 function getActionRowTextInput(data) {

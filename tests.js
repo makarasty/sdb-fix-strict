@@ -1,34 +1,22 @@
-require('dotenv').config();
-
+const assert = require('node:assert/strict');
 const Discord = require('discord.js');
 
-const sdbFixStrict = /**@type {import('sdb-fix-strict')}*/ (require('./index.js'));
+const sdbFixStrict = /** @type {typeof import('./index')} */ (require('./index.js'));
 
-const bot = new Discord.Client({
-	intents: 47007,
-});
+for (const [name, getRow] of Object.entries(sdbFixStrict)) {
+	assert.ok(getRow() instanceof Discord.ActionRowBuilder, `${name}() without data`);
 
-bot.once('ready', async (client) => {
-	const tests = [
-		sdbFixStrict.getActionRowButtons,
-		sdbFixStrict.getActionRowChannelSelectMenu,
-		sdbFixStrict.getActionRowMentionableSelectMenu,
-		sdbFixStrict.getActionRowRoleSelectMenu,
-		sdbFixStrict.getActionRowStringSelectMenu,
-		sdbFixStrict.getActionRowUserSelectMenu,
-		sdbFixStrict.getActionRowTextInput,
-	].map(async (row) => {
-		return {
-			name: row.name,
-			instanceOfActionRowBuilder: row() instanceof Discord.ActionRowBuilder,
-		};
-	});
+	const row = getRow({ components: [] });
+	assert.ok(row instanceof Discord.ActionRowBuilder, `${name}() with data`);
+	assert.deepEqual(row.toJSON(), { type: Discord.ComponentType.ActionRow, components: [] });
+}
 
-	console.log(tests);
+assert.equal(
+	sdbFixStrict
+		.getActionRowButtons()
+		.setComponents(new Discord.ButtonBuilder().setCustomId('a').setLabel('a').setStyle(1))
+		.toJSON().components.length,
+	1,
+);
 
-	console.log('All tests trying!');
-
-	await client.destroy();
-});
-
-bot.login(process.env.token);
+console.log(`ok: ${Object.keys(sdbFixStrict).length} functions`);

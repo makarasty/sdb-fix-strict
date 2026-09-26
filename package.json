@@ -1,21 +1,40 @@
 {
 	"name": "sdb-fix-strict",
-	"version": "2.1.0",
+	"version": "2.1.1",
 	"description": "This library resolves ActionRowBuilder<any> type errors in Discord.js by defining the ActionRowBuilder type using JSDoc. It ensures compatibility with discord.js while using 'strict': true in CommonJS environments.",
 	"main": "index.js",
+	"types": "index.d.ts",
 	"scripts": {
-		"test": "node tests.js",
-		"start": "node index.js"
+		"test": "node tests.js"
 	},
 	"author": "MaKarastY",
 	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/makarasty/sdb-fix-strict.git"
+	},
+	"keywords": [
+		"discord",
+		"discord.js",
+		"actionrow",
+		"typescript",
+		"jsdoc",
+		"strict"
+	],
+	"engines": {
+		"node": ">=18"
+	},
 	"peerDependencies": {
 		"discord.js": "^14.0.0"
 	},
 	"devDependencies": {
-		"dotenv": "^17.3.1"
+		"discord.js": "^14.27.0"
 	},
-	"dependencies": {
-		"sdb-fix-strict": "file:"
-	}
+	"files": [
+		"index.js",
+		"index.d.ts",
+		"types.d.ts",
+		"README.md",
+		"LICENSE"
+	]
 }

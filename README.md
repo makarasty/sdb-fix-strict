@@ -4,7 +4,9 @@ A library for `discord.js` that fixes `ActionRowBuilder<any>` errors by defining
 
 # Installing
 
-install `npm i sdb-fix-strict`
+```sh
+npm i sdb-fix-strict
+```
 
 # That fixes
 
@@ -19,7 +21,7 @@ Using `sdb-fix-strict`:
 # Dependencies
 
 - `discord.js` version `14`+
-- `Node.js` version `16`+
+- `Node.js` version `18`+
 
 # Some usage example
 
